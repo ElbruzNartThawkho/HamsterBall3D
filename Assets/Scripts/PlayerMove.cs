@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMove : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float xInput;
     [SerializeField] private float zInput;
-    [SerializeField] private FixedJoystick joystick;
+    private VariableJoystick joystick;
     public GameObject Player;
+    private GameObject checkPoint;
     private Rigidbody rb;
     [SerializeField] private Transform Cam;
     private float x, z;//dir
@@ -26,6 +28,9 @@ public class PlayerMove : MonoBehaviour
     }
     private void Awake()
     {
+        checkPoint = GameObject.FindWithTag("Control2");
+        checkPoint.SetActive(false);
+        joystick = GameObject.FindWithTag("Control1").GetComponent<VariableJoystick>();
         rb = Player.GetComponent<Rigidbody>();
         //target = Player.GetComponent<Transform>();
     }
@@ -115,6 +120,19 @@ public class PlayerMove : MonoBehaviour
 
     //    }
     //}
+    IEnumerator Check()
+    {
+        checkPoint.SetActive(true);
+        checkPoint.GetComponent<TextMeshProUGUI>().text += "."; 
+        yield return new WaitForSeconds(0.3f);
+        checkPoint.GetComponent<TextMeshProUGUI>().text += ".";
+        yield return new WaitForSeconds(0.3f);
+        checkPoint.GetComponent<TextMeshProUGUI>().text += ".";
+        yield return new WaitForSeconds(0.3f);
+        checkPoint.GetComponent<TextMeshProUGUI>().text = "Checkpoint";
+        yield return new WaitForSeconds(0.1f);
+        checkPoint.SetActive(false);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Checkpoint")
@@ -122,6 +140,7 @@ public class PlayerMove : MonoBehaviour
             lastLoct = other.gameObject.transform.position;
             lastLoct.y += 1f;
             isGround = false;
+            StartCoroutine(Check());
         }
     }
     private void OnCollisionExit(Collision collision)
