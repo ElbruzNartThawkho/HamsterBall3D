@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class RedBtn : MonoBehaviour
 {
-    public GameObject WinScreen;
+    private GameObject WinScreen;
+    private void Awake()
+    {
+        WinScreen = GameObject.FindWithTag("WinScreen");
+        WinScreen.SetActive(false);
+    }
     IEnumerator Win()
     {
         WinScreen.SetActive(true);
@@ -17,6 +22,11 @@ public class RedBtn : MonoBehaviour
     {
         if(collision.collider.gameObject.tag == "Player")
         {
+#if UNITY_ANDROID
+                Handheld.Vibrate();
+#endif
+            Interstital interstital = new Interstital();
+            interstital.Gameover();
             StartCoroutine(Win());
         }
     }
