@@ -8,8 +8,9 @@ OcclusionCullingSettings:
     smallestOccluder: 5
     smallestHole: 0.25
     backfaceThreshold: 100
-  m_SceneGUID: 00000000000000000000000000000000
-  m_OcclusionCullingData: {fileID: 0}
+  m_SceneGUID: badad2c9e30abea4ba5d96cb6f40ed5a
+  m_OcclusionCullingData: {fileID: 36300000, guid: a104853dde5a25d48b542e79e15af7d1,
+    type: 2}
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
@@ -38,7 +39,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0412504, g: 0.07305349, b: 0.12561938, a: 1}
+  m_IndirectSpecularColor: {r: 0.041223936, g: 0.073039345, b: 0.12552655, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -301,7 +302,7 @@ RectTransform:
   - {fileID: 1163727978}
   - {fileID: 427350465}
   m_Father: {fileID: 1280515841}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1127,7 +1128,7 @@ RectTransform:
   m_Children:
   - {fileID: 1812780094}
   m_Father: {fileID: 1280515841}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1432,6 +1433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RedBtn
+      objectReference: {fileID: 0}
+    - target: {fileID: 8465695323990467059, guid: ce735e0e088f1dc4bb24da34d9b16607,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8465695323990467062, guid: ce735e0e088f1dc4bb24da34d9b16607,
         type: 3}
@@ -1850,7 +1856,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &441703525
 BoxCollider:
@@ -7182,6 +7188,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ray (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8191885388690193844, guid: 8419c9169cd27344087368b551b9066c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8191885388690193847, guid: 8419c9169cd27344087368b551b9066c,
         type: 3}
       propertyPath: m_RootOrder
@@ -7334,6 +7345,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ray
+      objectReference: {fileID: 0}
+    - target: {fileID: 8191885388690193844, guid: 8419c9169cd27344087368b551b9066c,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8191885388690193847, guid: 8419c9169cd27344087368b551b9066c,
         type: 3}
@@ -7942,7 +7958,7 @@ RectTransform:
   - {fileID: 504588513}
   - {fileID: 1399792768}
   m_Father: {fileID: 1280515841}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -8756,10 +8772,10 @@ RectTransform:
   m_Children:
   - {fileID: 1093705152}
   - {fileID: 791396171}
-  - {fileID: 191099834}
   - {fileID: 4566202}
   - {fileID: 868268394}
   - {fileID: 1539001017}
+  - {fileID: 191099834}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9033,7 +9049,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &1400689844
 BoxCollider:
@@ -9334,7 +9350,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &1518650435
 BoxCollider:
@@ -9609,7 +9625,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1280515841}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -9900,7 +9916,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &1609110091
 BoxCollider:
@@ -10235,7 +10251,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &1812769348
 BoxCollider:
@@ -10544,6 +10560,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: emptypipesq
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e8c68876355e51e47863069442abe8c6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8c68876355e51e47863069442abe8c6, type: 3}
 --- !u!1 &1820649867 stripped
@@ -10621,7 +10642,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &1845044366
 BoxCollider:
@@ -11032,7 +11053,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2067562870
 Transform:
@@ -11130,7 +11151,7 @@ GameObject:
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &2117922742
 Transform:

@@ -11,9 +11,11 @@ public class Interstital : MonoBehaviour
     public void RequestInterstitial()
     {
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-6395087566028615~8612151838";
+        string adUnitId = "ca-app-pub-6395087566028615/9350518436";//benimki ca-app-pub-6395087566028615/9350518436
+        //ca-app-pub-3940256099942544/1033173712
+
 #elif UNITY_IPHONE
-                string adUnitId = "ca-app-pub-3940256099942544/4411468910";
+                string adUnitId = "ca-app-pub-6395087566028615/9350518436";
 #else
         string adUnitId = "unexpected_platform";
 #endif
@@ -53,7 +55,7 @@ public class Interstital : MonoBehaviour
     public void HandleOnAdClosed(object sender, EventArgs args)
     {
         MonoBehaviour.print("HandleAdClosed event received");
-        Time.timeScale = 0;
+        Time.timeScale = 1;
     }
 
     public void HandleOnAdLeavingApplication(object sender, EventArgs args)

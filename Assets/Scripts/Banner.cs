@@ -17,9 +17,10 @@ public class Banner : MonoBehaviour
     {
 
 #if UNITY_ANDROID
-        string adUnitId = "ca-app-pub-6395087566028615~8612151838";
+        string adUnitId = "ca-app-pub-6395087566028615/9255698408";// ca-app-pub-3940256099942544/6300978111
+        //benimki ca-app-pub-6395087566028615/9255698408
 #elif UNITY_IPHONE
-            string adUnitId = "ca-app-pub-6395087566028615~8612151838";
+            string adUnitId = "ca-app-pub-6395087566028615/9255698408";
 #else
         string adUnitId = "unexpected_platform";
 #endif

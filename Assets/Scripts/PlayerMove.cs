@@ -104,14 +104,25 @@ public class PlayerMove : MonoBehaviour
             isGround = true;
         }
     }
+    int deadcount = 0;
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(3);
+        if (deadcount % 5 == 4)
+        {
+#if UNITY_ANDROID
+            Handheld.Vibrate();
+#endif
+            Interstital interstital = new Interstital();
+            interstital.Gameover();
+        }
+        deadcount++;
         gameObject.transform.position = lastLoct;
         //gameObject.GetComponent<Rigidbody>().useGravity = true;
         gameObject.GetComponent<SphereCollider>().enabled = true;
         gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         transform.localScale = new Vector3(100f, 100f, 100f);
+
     }
     //private void OnCollisionStay(Collision collision)
     //{

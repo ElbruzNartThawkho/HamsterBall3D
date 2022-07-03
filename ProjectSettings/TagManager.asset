@@ -12,6 +12,8 @@ TagManager:
   - Moveingplat
   - Enemy
   - Checkpoint
+  - Score
+  - inspoint
   layers:
   - Default
   - TransparentFX
